@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+.aj-site {
+    font-family: "Figtree", sans-serif;
+    color: #000435;
+}
+a {
+    transition: all ease-in-out 0.3s;
+}
+button:active,
+button:focus,
+.btn:active,
+.btn:focus {
+    box-shadow: none !important;
+}
