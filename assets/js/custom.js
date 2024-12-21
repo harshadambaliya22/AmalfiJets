@@ -62,6 +62,14 @@ $(document).ready(function () {
         $('.aj-mail-step__' + target).addClass('show');
     });
 
+    $('.aj-site-header-icon').on('click', function () {
+        $(this).siblings('.aj-member-details').toggleClass('show');
+    });
+
+    $('.aj-sidebar-icon').on('click', function () {
+        $('.aj-site-sidebar').toggleClass('aj-menu-open');
+    });
+
     if ($('#accountChart').length) {
         var ctx = document.getElementById("accountChart").getContext('2d');
         // Create the gradient
