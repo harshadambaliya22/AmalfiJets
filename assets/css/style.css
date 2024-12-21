@@ -313,6 +313,7 @@ button:focus,
     border-radius: 15px;
     max-height: 200px;
     overflow: auto;
+    font-size: 14px;
 }
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover,
 .ui-menu-item:hover {
@@ -445,7 +446,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .aj-site-header-icon {
     cursor: pointer;
     padding: 5px 10px;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 2px;
 }
@@ -455,6 +456,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     z-index: 10;
     width: 20px;
     top: 25px;
+    display: none;
 }
 .aj-sidebar-icon-close img {
     width: 20px;
@@ -1474,6 +1476,9 @@ font-size: 16px;
     .aj-dashboard-flight-card {
         margin-bottom: 20px;
     }
+    .aj-site-header-icon {
+        display: flex;
+    }
     .aj-member-details {
         flex-direction: column;
         position: absolute;
@@ -1505,6 +1510,9 @@ font-size: 16px;
     }
     .aj-member-item:last-child {
         border-bottom: none;
+    }
+    .aj-flight-content .aj-flight-details {
+        align-items: flex-start;
     }
 }
 @media (max-width: 991px) {
@@ -1538,8 +1546,51 @@ font-size: 16px;
     .aj-flight-details + .aj-flight-info-wrapper.show {
         max-height: 220px;
     }
+    .aj-site-page-title {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    .nav-tabs .nav-link {
+        font-size: 14px;
+    }
+    .aj-flight-content .aj-flight-info-item:nth-child(odd) {
+        width: 28%;
+    }
+    .aj-flight-content .aj-flight-details-wrapper {
+        width: calc(100% - 190px);
+    }
+    .aj-flight-content .aj-flight-img img {
+        width: 170px;
+        height: 130px;
+    }
+    .aj-account-export .btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .table thead th {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .table tbody td {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .aj-profile-card {
+        margin-bottom: 15px;
+    }
+    .aj-chat-profile-sidebar {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+    .aj-chat-wrapper {
+        width: calc(100% - 345px);
+    }
 }
 @media (max-width: 767px) {
+    .aj-sidebar-icon-close {
+        display: block;
+    }
     .aj-login-logo img {
         margin-bottom: 10px;
         width: 210px;
@@ -1603,6 +1654,52 @@ font-size: 16px;
     }
     .aj-flight-info-item:nth-child(odd) {
         width: 46%;
+    }
+    .aj-flight-content .aj-flight-img img {
+        width: 100%;
+    }
+    .aj-flight-content .aj-flight-details-wrapper {
+        width: 100%;
+    }
+    .aj-flight-content .aj-flight-info-item:nth-child(odd) {
+        width: 46%;
+    }
+    .aj-account-card .aj-dashboard-account-detail {
+        flex-direction: row;
+        align-items: center;
+    }
+    .aj-account-wrapper .aj-account-card {
+        margin-bottom: 15px;
+    }
+    .aj-site-pagination .page-link {
+        width: 25px;
+        height: 25px;
+    }
+    .aj-site-chat-sidebar {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .aj-chat-wrapper {
+        width: 100%;
+    }
+    .aj-chat-img-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .aj-new-chat-btn,
+    .aj-search-chat {
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+    .aj-chat-header {
+        padding: 10px 15px;
+    }
+    .aj-chat-wrapper__inner,
+    .aj-chat-typing,
+    .aj-chat-profile,
+    .aj-chat-profile-images,
+    .aj-chat-profile-contact {
+        padding: 15px;
     }
 }
 /* Responsive Page End */
