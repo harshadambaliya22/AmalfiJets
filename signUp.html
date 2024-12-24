@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- All JSfiles -->
@@ -20,6 +21,7 @@
     <script src="assets/js/smooth-scrollbar.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
 </head>
@@ -34,43 +36,100 @@
                     <img src="assets/images/logo-light.svg" alt="Amalfi Jets" class="img-fluid">
                     <p class="aj-site-tagline">Jet Card Holder</p>
                 </div>
-                <div class="aj-login-form-wrapper">
+                <div class="aj-login-form-wrapper aj-signUp-form-wrapper">
                     <div class="aj-site-page-header">
                         <h1 class="aj-site-page-title">Sign Up</h1>
                         <p class="aj-site-page-text">Enter your information to create an account.</p>
                     </div>
                     <div class="aj-login-form">
                         <form class="row g-3" action="dashboard.html">
-                            <div class="col-md-6">
+                            <div class="col col-12 col-md-6">
                                 <label for="username" class="form-label">Username</label>
                                 <div class="aj-input-field">
                                     <input type="text" class="form-control" id="username" placeholder="Henna_Montana"
                                         value="Henna_Montana |">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col col-12 col-md-6">
                                 <label for="companyName" class="form-label">Company Name</label>
                                 <div class="aj-input-field">
                                     <input type="text" class="form-control" id="companyName" placeholder="Company name">
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <label for="password" class="form-label">Are you flying primarily for business or
+                            <div class="col col-12 col-md-12">
+                                <label for="typeBusiness" class="form-label">Are you flying primarily for business or
                                     personal?</label>
-                                <div class="aj-input-field">
+                                <div class="aj-input-field aj-flyingType">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="typeBusiness" value="option1">
+                                        <input class="form-check-input" type="radio" name="flyingOptions"
+                                            id="typeBusiness" value="1" checked>
                                         <label class="form-check-label" for="typeBusiness">Business</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="typePersonal" value="option2">
+                                        <input class="form-check-input" type="radio" name="flyingOptions"
+                                            id="typePersonal" value="2">
                                         <label class="form-check-label" for="typePersonal">Personal</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col col-12 col-md-6">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <label for="inputEnternumber" class="form-label">Phone number</label>
+                                <div class="aj-phoneNumber-field">
+                                    <select class="form-select" id="countryCode">
+                                        <option selected>+1</option>
+                                        <option value="1">+91</option>
+                                        <option value="2">+79</option>
+                                        <option value="3">+280</option>
+                                    </select>
+                                    <input type="text" class="form-control" id="inputEnternumber"
+                                        placeholder="Enter number">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <label for="streetAddress" class="form-label">Street Address</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="streetAddress"
+                                        placeholder="Enter Street Address">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <label for="city" class="form-label">City</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="city" placeholder="Enter City">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <label for="stateRegion" class="form-label">State/Region</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="stateRegion"
+                                        placeholder="Enter State/Region">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <label for="zipCode" class="form-label">Zip Code</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="zipCode" placeholder="Enter Zip Code">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-12">
+                                <label for="country" class="form-label">Country</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="country" placeholder="Enter Country">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-12">
+                                <label for="numberFlights" class="form-label">How many flights per year do you
+                                    take?</label>
+                                <div class="aj-input-field">
+                                    <input type="text" class="form-control" id="numberFlights"
+                                        placeholder="Enter Enter number of flights">
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-12">
                                 <label for="password" class="form-label">Password</label>
                                 <div class="aj-input-field">
                                     <input type="password" class="form-control" id="password" placeholder="********">
@@ -79,16 +138,44 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col col-12 col-md-12">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <div class="aj-input-field">
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="********">
+                                    <span class="aj-password-icon">
+                                        <img src="assets/images/eyeSlash.svg" alt="NewPassword" class="img-fluid">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col col-12">
                                 <div class="form-check aj-remember-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberCheck">
+                                    <input class="form-check-input" type="checkbox" id="rememberCheck" checked>
                                     <label class="form-check-label" for="rememberCheck">
                                         Remember my preference
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            <div class="col col-12 col-md-12">
+                                <label for="flownPrivatelyYes" class="form-label">Have you flown privately
+                                    before?</label>
+                                <div class="aj-input-field aj-flyingType">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flownPrivatelyOption"
+                                            id="flownPrivatelyYes" value="1" checked>
+                                        <label class="form-check-label" for="flownPrivatelyYes">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flownPrivatelyOption"
+                                            id="flownPrivatelyNo" value="2">
+                                        <label class="form-check-label" for="flownPrivatelyNo">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-12">
+                                <button type="submit" class="btn btn-primary w-100">Create account</button>
+                                <p class="aj-form-notes"><span>Already have an account?</span> <a
+                                        href="index.html">Login</a></p>
                             </div>
                         </form>
                     </div>

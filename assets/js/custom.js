@@ -135,6 +135,11 @@ $(document).ready(function () {
     }
 
 
+    $('#countryCode').select2({
+        placeholder: "Select a country code",
+        allowClear: false,
+        width: 'resolve' // Ensures the dropdown uses the same width as its container
+    });
 
     if ('[data-scrollbar]') {
         Scrollbar.initAll();

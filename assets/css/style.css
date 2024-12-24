@@ -1720,6 +1720,9 @@ font-size: 16px;
     max-width: 100%;
     padding: 30px;
 }
+.aj-signUp-form-wrapper {
+    width: 745px;
+}
 .aj-login-form-wrapper .aj-site-page-header {
     text-align: center;
     margin-bottom: 20px;
@@ -1764,6 +1767,73 @@ font-size: 16px;
 .aj-login-form .btn {
     font-size: 15px;
     padding: 13px;
+}
+.aj-flyingType .form-check-label {
+    opacity: 1;
+}
+.aj-flyingType .form-check-input {
+    border: 1px solid #000000;
+}
+.aj-phoneNumber-field {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #707070;
+}
+.aj-phoneNumber-field .form-control {
+    width: calc(100% - 65px);
+    padding-left: 10px;
+    border-bottom: none;
+}
+.aj-phoneNumber-field .select2-container {
+    width: 65px !important;
+}
+.aj-phoneNumber-field .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    padding-right: 0;
+}
+.aj-phoneNumber-field .select2-container--default .select2-selection--single {
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid #E0E0E0;
+    height: auto;
+}
+.aj-phoneNumber-field .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000;
+    line-height: 1.5;
+}
+.aj-phoneNumber-field .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+}
+.aj-phoneNumber-field .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    width: 20px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8538 0.85354L5.85375 5.85354C5.80732 5.90003 5.75217 5.93691 5.69147 5.96207C5.63077 5.98723 5.56571 6.00018 5.5 6.00018C5.4343 6.00018 5.36923 5.98723 5.30853 5.96207C5.24783 5.93691 5.19269 5.90003 5.14625 5.85354L0.146253 0.85354C0.052433 0.75972 -0.000274658 0.632472 -0.000274658 0.49979C-0.000274658 0.367108 0.052433 0.23986 0.146253 0.146039C0.240074 0.0522192 0.367321 -0.000488281 0.500003 -0.000488281C0.632685 -0.000488281 0.759933 0.0522192 0.853753 0.146039L5.5 4.79291L10.1463 0.146039C10.1927 0.0995844 10.2479 0.0627342 10.3086 0.0375929C10.3693 0.0124516 10.4343 -0.000488281 10.5 -0.000488281C10.5657 -0.000488281 10.6308 0.0124516 10.6915 0.0375929C10.7521 0.0627342 10.8073 0.0995844 10.8538 0.146039C10.9002 0.192495 10.9371 0.247645 10.9622 0.308342C10.9873 0.369038 11.0003 0.434092 11.0003 0.49979C11.0003 0.565487 10.9873 0.630541 10.9622 0.691238C10.9371 0.751934 10.9002 0.807085 10.8538 0.85354Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+    transform: translate(-50%, -50%);
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #000;
+}
+.aj-form-notes {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+.aj-form-notes a {
+    color: #000000;
+    font-weight: 500;
+}
+.aj-form-notes a:hover {
+    color: #000000;
+}
+.aj-form-notes span {
+    opacity: 0.5;
 }
 /* Login Page End */
 
