@@ -573,6 +573,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: calc(100vh - 85px);
     overflow-y: auto;
 }
+.aj-site-content-wrapper .scrollbar-track-x {
+    display: none !important;
+}
 .aj-dashboard-card {
     background: #FFFFFF;
     border: 1px solid rgba(86, 85, 83, 0.1);
