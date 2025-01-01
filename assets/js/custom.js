@@ -144,4 +144,15 @@ $(document).ready(function () {
     if ('[data-scrollbar]') {
         Scrollbar.initAll();
     }
+    $('#depositAmount').keyup(function () {
+        $(this).val(function (i, v) {
+            return '$' + v.replace('$', ''); //remove exisiting, add back.
+        });
+    });
+
+    $('input[name="depositMethod"]').change(function () {
+        // var selectedValue = $('input[name="depositMethod"]:checked');
+        $('.aj-deposit-method-body').removeClass('active')
+        $(this).parents('.aj-deposit-method-item').find('.aj-deposit-method-body').addClass('active')
+    });
 });

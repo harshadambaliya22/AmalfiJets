@@ -650,8 +650,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(22.42%, rgba(255, 252, 250, 0.892992)), color-stop(49.05%, rgba(255, 226, 209, 0)));
     background: -o-linear-gradient(left, #FFFFFF 0%, rgba(255, 252, 250, 0.892992) 22.42%, rgba(255, 226, 209, 0) 49.05%);
+    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(22.42%, rgba(255, 252, 250, 0.892992)), color-stop(49.05%, rgba(255, 226, 209, 0)));
     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 252, 250, 0.892992) 22.42%, rgba(255, 226, 209, 0) 49.05%);
     border-radius: 16px;
 }
@@ -739,6 +739,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .aj-flight-detail-item:first-child {
     text-align: right;
+}
+.aj-flight-detail-item {
+    width: calc(40% - 25px);
+}
+.aj-flight-detail-item:nth-child(2) {
+    width: 20%;
 }
 .aj-flight-destination {
     font-weight: 700;
@@ -1071,8 +1077,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #FFFFFF;
     padding: 2px 9px;
     display: inline-block;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #000000;
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
     border-radius: 30px;
 }
@@ -1339,15 +1345,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #FFFFFF;
     padding: 3px 9px;
     display: inline-block;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #000000;
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
     border-radius: 30px;
     line-height: 1;
 }
 .aj-chat-member-post-ar {
-    background: -webkit-gradient(linear, right top, left top, color-stop(-11.25%, #969393), color-stop(48.75%, #FFFFFF), color-stop(108.75%, #B7B5B5));
     background: -o-linear-gradient(right, #969393 -11.25%, #FFFFFF 48.75%, #B7B5B5 108.75%);
+    background: -webkit-gradient(linear, right top, left top, color-stop(-11.25%, #969393), color-stop(48.75%, #FFFFFF), color-stop(108.75%, #B7B5B5));
     background: linear-gradient(270deg, #969393 -11.25%, #FFFFFF 48.75%, #B7B5B5 108.75%);
     color: #000000;
 }
@@ -1603,21 +1609,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 16px;
     margin-bottom: 5px;
 }
-.aj-account-card .aj-dashboard-account-amount {
-    margin-bottom: 0;
-}
 .aj-account-card .aj-dashboard-account-detail {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
 }
 .aj-account-chart {
     width: 100%;
-    height: 150px;
+    height: 110px;
 }
 .aj-account-wrapper .aj-account-card {
     margin-bottom: 20px;
@@ -1775,9 +1774,14 @@ font-size: 16px;
     border: 1px solid #000000;
 }
 .aj-phoneNumber-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     border-bottom: 1px solid #707070;
 }
 .aj-phoneNumber-field .form-control {
@@ -1813,7 +1817,9 @@ font-size: 16px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10px;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: #000;
@@ -1836,6 +1842,119 @@ font-size: 16px;
     opacity: 0.5;
 }
 /* Login Page End */
+
+/* Add Fund Page Start */
+.aj-deposit-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.aj-deposit-input-wrapper {
+    background-color: rgba(86, 85, 83, 0.04);
+    border-radius: 15px;
+    padding: 20px 20px 35px;
+    margin-bottom: 20px;
+}
+.aj-deposit-label {
+    font-size: 10px;
+    color: rgba(0, 4, 53, 0.5);
+    text-align: center;
+}
+.aj-deposit-input-wrapper .form-control {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    padding: 0 12px 12px;
+}
+.aj-deposit-input-wrapper .form-control:focus {
+    border-color:  rgba(0, 4, 53, 0.1);
+}
+.aj-deposit-method-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+.aj-deposit-method-head {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(86, 85, 83, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+}
+.aj-deposit-method-label .form-check {
+    padding-left: 20px;
+}
+.aj-deposit-method-label .form-check-input {
+    width: 12px;
+    height: 12px;
+    margin-top: 7px; 
+    margin-left: -19px;
+}
+.aj-deposit-method-label .form-check-label {
+    opacity: 1;
+}
+.aj-deposit-method-body {
+    padding: 15px;
+    display: none;
+}
+.aj-deposit-method-body.active{
+    display: block;
+}
+.aj-deposit-method-body .form-floating>label {
+    left: 0;
+}
+.aj-deposit-method-body .form-floating>.form-control:not(:-moz-placeholder-shown) {
+    padding: 12px 16px;
+}
+.aj-deposit-method-body .form-floating>.form-control:not(:-ms-input-placeholder) {
+    padding: 12px 16px;
+}
+.aj-deposit-method-body .form-floating>.form-control:focus, 
+.aj-deposit-method-body .form-floating>.form-control:not(:placeholder-shown) {
+    padding: 12px 16px;
+}
+.aj-deposit-method-card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+}
+.aj-deposit-method-card-item {
+    width: 34px;
+    height: 23px;
+    background-color: #E5E6EB;
+    border-radius: 3px;
+    padding: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.aj-deposit-method-card-item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+/* Add Fund Page End */
 
 /* Responsive Page Start */
 @media (min-width: 576px) {
@@ -2107,6 +2226,25 @@ font-size: 16px;
     .aj-chat-profile-images,
     .aj-chat-profile-contact {
         padding: 15px;
+    }
+    .aj-flight-details__inner {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }    
+    .aj-flight-detail-item {
+        width: 100%;
+    }
+    .aj-flight-detail-item:nth-child(2) {
+        width: 100%;
+    }
+    .aj-flight-detail-item:first-child {
+        text-align: left;
+    }
+    .aj-add-fund-account-card {
+        margin-bottom: 15px;
+    }
+    .aj-deposit-method-body {
+        padding: 15px 0;
     }
 }
 /* Responsive Page End */

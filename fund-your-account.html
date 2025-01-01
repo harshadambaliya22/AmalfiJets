@@ -181,7 +181,7 @@
                             </svg>
                         </span>
                         <div class="aj-header-user-detail">
-                            <h2 class="aj-user-hello-name">Account Balance</h2>
+                            <h2 class="aj-user-hello-name">Fund Your Account</h2>
                         </div>
                     </div>
                     <div class="aj-site-header-right-part">
@@ -239,7 +239,7 @@
                     <div class="aj-account-wrapper">
                         <div class="row">
                             <div class="col col-12 col-md-4 col-lg-3">
-                                <div class="aj-account-card">
+                                <div class="aj-add-fund-account-card">
                                     <div class="aj-dashboard-card">
                                         <div class="aj-dashboard-card-body">
                                             <div class="aj-dashboard-account-detail">
@@ -258,20 +258,9 @@
                                                 </div>
                                                 <div class="aj-dashboard-account__inner">
                                                     <p class="aj-account-card-title">Account Balance</p>
-                                                    <h6 class="aj-dashboard-account-amount">$475,000
+                                                    <h6 class="aj-dashboard-account-amount mb-0">$475,000
                                                         <span>USD</span>
                                                     </h6>
-                                                    <a href="fund-your-account.html" class="btn btn-outline-primary">
-                                                        <span>Fund Your Account</span>
-                                                        <span>
-                                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M1.58838 9L5.41207 5L1.58838 1"
-                                                                    stroke="#000435" stroke-width="2"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -279,155 +268,143 @@
                                 </div>
                             </div>
                             <div class="col col-12 col-md-8 col-lg-9">
-                                <div class="aj-account-chart-wrapper">
-                                    <div class="aj-account-card">
-                                        <div class="aj-dashboard-card">
-                                            <div class="aj-dashboard-card-body">
-                                                <canvas id="accountChart" class="aj-account-chart"></canvas>
+                                <div class="aj-dashboard-card">
+                                    <div class="aj-dashboard-card-head">
+                                        <h3 class="aj-dashboard-card-title">Payment Method</h3>
+                                    </div>
+                                    <div class="aj-dashboard-card-body">
+                                        <div class="aj-deposit-wrapper">
+                                            <h5 class="aj-deposit-title">Deposit Amount</h5>
+                                            <div class="aj-deposit-input-wrapper">
+                                                <p class="aj-deposit-label">Your Amount To Deposit</p>
+                                                <input type="text" class="form-control" id="depositAmount"
+                                                    value="$10,000">
+                                            </div>
+                                            <div class="aj-deposit-method">
+                                                <h5 class="aj-deposit-method-title">Select Method</h5>
+                                                <div class="aj-deposit-method-item">
+                                                    <div class="aj-deposit-method-head">
+                                                        <div class="aj-deposit-method-label">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="depositMethod" id="depositMethod1" value="1"
+                                                                    checked>
+                                                                <label class="form-check-label" for="depositMethod1">
+                                                                    Credit Card (via Stripe)
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="aj-deposit-method-card-list">
+                                                            <div class="aj-deposit-method-card-item">
+                                                                <img src="assets/images/mastercard.png" alt="mastercard"
+                                                                    class="img-fluid">
+                                                            </div>
+                                                            <div class="aj-deposit-method-card-item">
+                                                                <img src="assets/images/mastercard.png" alt="mastercard"
+                                                                    class="img-fluid">
+                                                            </div>
+                                                            <div class="aj-deposit-method-card-item">
+                                                                <img src="assets/images/mastercard.png" alt="mastercard"
+                                                                    class="img-fluid">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aj-deposit-method-body active">
+                                                        <form class="row g-3">
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control"
+                                                                        id="fullName" placeholder="Full name on card">
+                                                                    <label for="fullName">Full name on card</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control"
+                                                                        id="cardNumber" placeholder="Card number">
+                                                                    <label for="cardNumber">Card number</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control" id="MMAAAA"
+                                                                        placeholder="MM / AAAA">
+                                                                    <label for="MMAAAA">MM / AAAA</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="password" class="form-control" id="cvv"
+                                                                        placeholder="CVV" maxlength="3">
+                                                                    <label for="cvv">CVV</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <button type="button"
+                                                                    class="btn btn-primary w-100">Deposit
+                                                                    Amount</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="aj-deposit-method-item">
+                                                    <div class="aj-deposit-method-head">
+                                                        <div class="aj-deposit-method-label">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="depositMethod" id="depositMethod2" value="2">
+                                                                <label class="form-check-label" for="depositMethod2">
+                                                                    Bank Transfer
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="aj-deposit-method-card-list">
+                                                            <div class="aj-deposit-method-card-item">
+                                                                <img src="assets/images/sbi.png" alt="sbi"
+                                                                    class="img-fluid">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aj-deposit-method-body">
+                                                        <form class="row g-3">
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control"
+                                                                        id="fullName" placeholder="Full name on card">
+                                                                    <label for="fullName">Full name on card</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control"
+                                                                        id="cardNumber" placeholder="Card number">
+                                                                    <label for="cardNumber">Card number</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control" id="MMAAAA"
+                                                                        placeholder="MM / AAAA">
+                                                                    <label for="MMAAAA">MM / AAAA</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-12 col-md-6 col-lg-6">
+                                                                <div class="form-floating">
+                                                                    <input type="password" class="form-control" id="cvv"
+                                                                        placeholder="CVV" maxlength="3">
+                                                                    <label for="cvv">CVV</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <button type="button"
+                                                                    class="btn btn-primary w-100">Deposit
+                                                                    Amount</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aj-account-history">
-                        <div class="aj-account-export text-end">
-                            <button class="btn btn-primary">
-                                <span>Export PDF</span>
-                                <span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.31967 10.74C5.31967 11.0533 5.04634 11.3133 4.72634 11.3133H4.17301V10.1667H4.73301C5.05301 10.1667 5.32634 10.4267 5.32634 10.74H5.31967ZM9.99967 5.33333H14.3597C14.1263 4.72667 13.773 4.16667 13.2997 3.69333L10.9797 1.36667C10.5063 0.893333 9.94634 0.54 9.33967 0.306667V4.66667C9.33967 5.03333 9.63968 5.33333 10.0063 5.33333H9.99967ZM8.05967 10.1667H7.49967V12.5H8.05967C8.37967 12.5 8.65301 12.24 8.65301 11.9267V10.74C8.65301 10.4267 8.37967 10.1667 8.05967 10.1667ZM14.6663 6.99333V12.6667C14.6663 14.5067 13.173 16 11.333 16H4.66634C2.82634 16 1.33301 14.5067 1.33301 12.6667V3.33333C1.33301 1.49333 2.82634 0 4.66634 0H7.67301C7.77968 0 7.88634 0.00666667 7.99967 0.0133333V4.66667C7.99967 5.76667 8.89967 6.66667 9.99967 6.66667H14.653C14.6597 6.77333 14.6663 6.88 14.6663 6.99333ZM6.15301 10.74C6.15301 9.96667 5.51301 9.33333 4.72634 9.33333H3.99967C3.63301 9.33333 3.33301 9.63333 3.33301 10V12.96C3.33301 13.1933 3.51967 13.3733 3.74634 13.3733C3.97301 13.3733 4.15967 13.1867 4.15967 12.96V12.1467H4.71967C5.50634 12.1467 6.14634 11.5133 6.14634 10.74H6.15301ZM9.48634 10.74C9.48634 9.96667 8.84634 9.33333 8.05967 9.33333H7.33301C6.96634 9.33333 6.66634 9.63333 6.66634 10V12.96C6.66634 13.1933 6.85301 13.3333 7.07967 13.3333C7.30634 13.3333 8.05301 13.3333 8.05301 13.3333C8.83967 13.3333 9.47967 12.7 9.47967 11.9267V10.74H9.48634ZM12.6797 9.75333C12.6797 9.52 12.493 9.34 12.2663 9.34H10.7263C10.493 9.34 10.313 9.52667 10.313 9.75333V12.96C10.313 13.1933 10.4997 13.3733 10.7263 13.3733C10.953 13.3733 11.1397 13.1867 11.1397 12.96V11.76H11.9663C12.1997 11.76 12.3797 11.5733 12.3797 11.3467C12.3797 11.12 12.193 10.9333 11.9663 10.9333H11.1397V10.1733H12.2663C12.4997 10.1733 12.6797 9.98667 12.6797 9.76V9.75333Z"
-                                            fill="white" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="aj-account-history-table">
-                            <div class="aj-dashboard-card">
-                                <div class="aj-dashboard-card-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Payment ID</th>
-                                                    <th>Payment Date</th>
-                                                    <th>Time</th>
-                                                    <th>Total Amount</th>
-                                                    <th>Payment Method</th>
-                                                    <th class="text-end">Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-positive">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span class="aj-amount-status">Deposit</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-nagative">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span
-                                                            class="aj-amount-status aj-withdrawal">Withdrawal</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-positive">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span class="aj-amount-status">Deposit</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-positive">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span class="aj-amount-status">Deposit</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-nagative">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span
-                                                            class="aj-amount-status aj-withdrawal">Withdrawal</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-nagative">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span
-                                                            class="aj-amount-status aj-withdrawal">Withdrawal</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>FLT20241118NYC</td>
-                                                    <td>November 15, 2024</td>
-                                                    <td>09:37 PM</td>
-                                                    <td><span class="aj-amount-type aj-positive">$75,000</span></td>
-                                                    <td>Credit Card</td>
-                                                    <td class="text-end"><span class="aj-amount-status">Deposit</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="aj-site-pagination">
-                                        <p class="aj-site-pagination-count">2 of 2,982</p>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">
-                                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M5.25002 0.850098L1.65002 4.4501L5.25002 8.0501"
-                                                                    stroke="#000435" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a>
-                                                </li>
-                                                <li class="page-item active"><a class="page-link" href="#">2</a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">
-                                                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M1.65002 0.850098L5.25002 4.4501L1.65002 8.0501"
-                                                                    stroke="#000435" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
                                     </div>
                                 </div>
                             </div>
