@@ -68,6 +68,8 @@ $(document).ready(function () {
 
     $('.aj-sidebar-icon').on('click', function () {
         $('.aj-site-sidebar').toggleClass('aj-menu-open');
+        $('.aj-site-content').toggleClass('aj-sidebar-expanded');
+        $('.aj-promotion-slider').slick('refresh');
     });
 
     if ($('#accountChart').length) {
